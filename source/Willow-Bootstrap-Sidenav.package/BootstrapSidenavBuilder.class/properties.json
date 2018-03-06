@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"elements"
+		"elements",
+		"brandView"
 	],
 	"name" : "BootstrapSidenavBuilder",
 	"type" : "normal"

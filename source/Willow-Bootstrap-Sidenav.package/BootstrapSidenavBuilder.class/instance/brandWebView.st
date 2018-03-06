@@ -2,5 +2,5 @@ building
 brandWebView
 
 	^ GenericContainerWebView
-		wrapping: 'Brand logo'
+		wrapping: brandView content
 		applying: [ :container | container addClass bootstrap brand ]

@@ -6,6 +6,7 @@ renderElementsOn: canvas
 
 			list := canvas unorderedList.
 			list
+				id: 'lala';
 				class: BootstrapCssStyles sidenavList;
 				class: BootstrapCssStyles collapse;
 				with: [ elements do: [ :anElement | anElement cull: list cull: canvas ] ] ]

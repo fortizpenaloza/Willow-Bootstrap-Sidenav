@@ -5,6 +5,6 @@ buildApplying: aComponentCommand
 		wrapping: [ :canvas | 
 			canvas
 				render: self brandWebView;
-				render: 'burger button';
+				render: (BootstrapHamburgerButton targeting: 'lala');
 				render: (self renderElementsOn: canvas) ]
 		applying: [ :container | container addClass bootstrap sidenav ]
