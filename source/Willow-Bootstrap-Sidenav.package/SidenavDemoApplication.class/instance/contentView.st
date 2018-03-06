@@ -1,19 +1,14 @@
 accessing
 contentView
+	
+	currentView := [ :canvas | canvas render: 'Hello world!' ].
 
-	| grid |
-
-	grid := self componentSupplier gridBuilder
-		columnsPerRow: 1;
-		columnsWidths: #(2 10);
-		addContent: [ :canvas | canvas render: ' 2' ];
-		addContent: [ :canvas | canvas render: '10' ];
-		build.
+	contentView := IdentifiedWebView forDivNamed: 'content' containing: [:canvas | canvas render: currentView ].
 
 	^ [ :canvas | 
 	canvas
 		render: self sidenav;
 		render:
 			(GenericContainerWebView
-				wrapping: grid
+				wrapping: contentView
 				applying: [ :container | container addClass bootstrap containerFluid ]) ]

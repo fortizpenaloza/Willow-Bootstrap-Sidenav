@@ -1,7 +1,7 @@
 private-configuring
-addElementLabeled: aLabel uncollapsingOnClick: aCollapsedWebView
+addItemLabeled: aLabel uncollapsingOnClick: aCollapsedWebView
 
-	elements
+	items
 		add: [ :list :canvas | 
 			aCollapsedWebView identifyIn: canvas.
 			canvas

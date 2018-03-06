@@ -1,5 +1,5 @@
 configuring
-addCollapsedListOf: linksWebViews labeled: aLabel
+addItemLabeled: aLabel displayingAll: linksWebViews
 
 	| collapsedUnorderedList |
 	
@@ -8,4 +8,4 @@ addCollapsedListOf: linksWebViews labeled: aLabel
 		listing: linksWebViews
 		applyingToEach: [ :link |  ].
 	
-	self addElementLabeled: aLabel uncollapsingOnClick: collapsedUnorderedList.
+	self addItemLabeled: aLabel uncollapsingOnClick: collapsedUnorderedList.

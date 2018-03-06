@@ -1,29 +1,22 @@
 accessing
 sidenav
-
-	| dashboardLink builder subItem |
-
-	dashboardLink := self componentSupplier
-		asynchronicLinkLabeled: 'Dashboard'
-		applying: [ :link |  ].
-
-	subItem := self componentSupplier
-		asynchronicLinkLabeled: 'Sub item'
-		applying: [ :link |  ].
-
-	builder := self componentSupplier sidenavBuilder.
-	^ builder
+	^ self componentSupplier sidenavBuilder
 		setBrandViewTo: [ :canvas | canvas render: 'Logo' ];
-		add: dashboardLink;
-		addCollapsed: [ :canvas | 
+		addItem: 'Simply text';
+		addItem: self notificationWithBadge;
+		addItem: self dashboardLink;
+		addItemLabeled: 'Canvas'
+			displaying: [ :canvas | 
 			canvas
 				render:
 					(self componentSupplier gridBuilder
 						columnsPerRow: 2;
 						columnsWidths: #(2 10);
-						addContent: '1';
-						addContent: 'May i put anything in here';
-						build) ]
-			labeled: 'Canvas';
-		addCollapsedListOf: {subItem} labeled: 'Sub items';
+						addContent: '2';
+						addContent: 'Just testing the bootstrap grid';
+						build) ];
+		addItemLabeled: 'Sub items'
+			displayingAll:
+			{self firstSubItemLink.
+			self secondSubItemLink};
 		build
