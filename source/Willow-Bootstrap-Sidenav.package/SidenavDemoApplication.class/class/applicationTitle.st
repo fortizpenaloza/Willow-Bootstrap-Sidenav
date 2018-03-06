@@ -1,0 +1,4 @@
+accessing
+applicationTitle
+
+	 ^ 'Sidenav demo'

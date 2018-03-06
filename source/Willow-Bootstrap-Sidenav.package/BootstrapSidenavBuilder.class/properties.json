@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "WillowComponentBuilder",
+	"category" : "Willow-Bootstrap-Sidenav",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"elements"
+	],
+	"name" : "BootstrapSidenavBuilder",
+	"type" : "normal"
+}
